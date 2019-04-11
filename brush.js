@@ -1,7 +1,4 @@
-var BrushBase = require('brush-base');
-var regexLib = require('syntaxhighlighter-regex').commonRegExp;
-
-function Brush() {
+SyntaxHighlighter.brushes.TypeScript = function() {
   var keywords = 'break case catch class continue ' +
     'default delete do else enum export extends false  ' +
     'for function if implements import in instanceof ' +
@@ -36,6 +33,5 @@ function Brush() {
   this.forHtmlScript(regexLib.scriptScriptTags);
 };
 
-Brush.prototype = new BrushBase();
-Brush.aliases = ['ts', 'typescript'];
-module.exports = Brush;
+SyntaxHighlighter.brushes.TypeScript.prototype = new SyntaxHighlighter.Highlighter();
+SyntaxHighlighter.brushes.TypeScript.aliases  = ['TypeScript'];
